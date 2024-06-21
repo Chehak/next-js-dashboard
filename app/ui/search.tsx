@@ -11,6 +11,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const { replace } = useRouter()
   const handleOnchange = useDebouncedCallback((val:any)=>{
     const searchParams = new URLSearchParams(params);
+    searchParams.set('page', '1');
     if(val){
       searchParams.set('query',val);
     }
