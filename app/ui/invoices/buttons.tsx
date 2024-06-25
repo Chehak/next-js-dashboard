@@ -28,6 +28,7 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
+  
   const deleteWithId = deleteInvoice.bind(null,id)
   return (
     <form action={deleteWithId}>
